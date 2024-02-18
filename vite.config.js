@@ -10,7 +10,8 @@ export default defineConfig({
 	server: { port: 9999 },
 	resolve: {
 		alias: {
-			'@': fileURLToPath(new URL('./src', import.meta.url))
+			'@': fileURLToPath(new URL('./src', import.meta.url)),
+			'@stores': fileURLToPath(new URL('./src/piniaStores', import.meta.url))
 		}
 	}
 })

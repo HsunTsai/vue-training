@@ -1,6 +1,7 @@
 <script setup>
 import { RouterView } from 'vue-router'
 // import HelloWorld from './components/HelloWorld.vue'
+import { routes } from './router'
 import './app.scss'
 </script>
 
@@ -19,7 +20,9 @@ import './app.scss'
 	</header> -->
 
 	<div class="app">
+		<div class="app__links">
+			<RouterLink class="app__links__item" v-for="{ path, name } in routes" :key="path" :to="path">{{ name }}</RouterLink>
+		</div>
 		<RouterView />
 	</div>
 </template>
-

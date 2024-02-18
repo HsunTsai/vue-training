@@ -6,7 +6,7 @@ const { title } = defineProps(['title'])
 
 <template>
 	<div class="trainingBlock">
-		<div class="trainingBlock__title" v-if="title">. {{ title }}</div>
+		<div class="trainingBlock__title" v-if="title">。{{ title }}</div>
 		<slot></slot>
 	</div>
 </template>

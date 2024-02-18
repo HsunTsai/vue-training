@@ -1,0 +1,14 @@
+{
+	"product": {
+		"M1": "Macbook Air M1 2020",
+		"M2": "Macbook Air M2 2022"
+	},
+	"retina": {
+		"M1": "13.3 吋",
+		"M2": "13.6 吋"
+	},
+	"chips": {
+		"M1": "Apple M1 晶片",
+		"M2": "Apple M2 晶片"
+	}
+}

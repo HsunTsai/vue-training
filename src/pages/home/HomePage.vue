@@ -13,25 +13,15 @@ const inputValue = ref('456789')
 
 watch(arrayData, () => console.info('??', arrayData))
 watch(inputValue, () => console.info('inputValue', inputValue))
-
-const test = () => {
-	const id = arrayData?.length + 1
-	arrayData.push({ id, name: `Hsun${id}` })
-}
 </script>
 
 <template>
 	<div class="homePage">
-		<TrainingBlock>
-			<PersonList @on-click="(value) => console.info('hahaXDD', value)" :data="arrayData" />
-		</TrainingBlock>
-
-		<TrainingBlock>
-			<!-- <TheWelcome /> -->
-			<!-- [清單] 人 -->
-			<div class="homePage__person" v-for="item in arrayData" :key="item.id">{{ item.name }}</div>
-			<!-- [新增] 人 -->
-			<button @click="test">Click</button>
+		<TrainingBlock :title="'人員列表'">
+			<PersonList
+				@on-add="(value) => arrayData.push({ id: arrayData?.length + 1, name: `Hsun${arrayData?.length + 1}` })"
+				:data="arrayData"
+			/>
 		</TrainingBlock>
 
 		<TrainingBlock>

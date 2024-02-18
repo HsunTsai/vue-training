@@ -1,4 +1,8 @@
 .personList {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+
 	&__list {
 		display: flex;
 		gap: 12px;

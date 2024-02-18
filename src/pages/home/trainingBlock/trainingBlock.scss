@@ -3,4 +3,11 @@
 	border-radius: 8px;
 	padding: 12px;
 	width: calc(50% - 32px);
+
+	&__title {
+		line-height: 18px;
+		font-size: 18px;
+		font-weight: bold;
+		margin-bottom: 12px;
+	}
 }
